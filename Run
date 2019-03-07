@@ -46,7 +46,7 @@ logo_play() {
     printf "\033[38;5;600m\t"
     for i in ${!txtlogo[@]}; do
         for x in `seq 0 ${#txtlogo[$i]}`; do
-            printf "${txtlogo[$i]:$x:1}"
+            printf "${txtlogo[$i]:$x:1
             sleep $seconds
         done
         printf "\n\t"
@@ -55,7 +55,7 @@ logo_play() {
 	echo -e "\e[0m"
 }
 deltgbot() {
- rm -rf $HOME/.telegram-bot
+ rm -rf $HOME/.telegram-bo
 }
  config() {
 mkdir $HOME/.telegram-bot; cat <<EOF > $HOME/.telegram-bot/config
@@ -64,7 +64,7 @@ cli = {
 lua_script = "$HOME/tdbot/bot/Bot.lua";
 };
 EOF
-printf "\nConfig Has Been Saved.\n"
+printf "\nConfig Has Been Saved.\n
 }
 clilaunch() {
 ./libs/tdbot | grep -v "{"
@@ -73,7 +73,7 @@ clilaunch() {
 clilaunchauto() {
 while true; do
 ./libs/tdbot | grep -v "{"
-done
+don
 }
 
 apilaunch() {
@@ -82,7 +82,7 @@ lua ./bot/Api.lua
 
 apilaunchauto() {
 while true; do
-lua ./bot/Api.lua
+lua ./bot/Api.lu
 done
 }
 
