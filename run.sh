@@ -94,7 +94,7 @@ deltgbot() {
 
 }
 
- config() {
+if [ "$1" = "config" ]; then
 
 mkdir $HOME/.telegram-bot; cat <<EOF > $HOME/.telegram-bot/config
 
@@ -106,6 +106,8 @@ lua_script = "$HOME/tdbot/bot.lua";
 
 };
 
+EOF
+
 cat <<EOF > $HOME/tdbot/Config.lua
 
 do
@@ -114,9 +116,7 @@ local _ = {
 
 sudo = 'SUDO',
 
-bot = 'BOT',		
-
-my = 'USERNAME'
+bot = 'BOT',		my = 'USERNAME'
 
 }
 
@@ -132,25 +132,25 @@ taha
 
 EOF
 
-RED "ايدي المطور" 
+    RED "ايدي المطور" 
 
-read -rp ' ' ID
+	read -rp ' ' ID
 
-sed -i 's/SUDO/'$ID'/g' Config.lua
+	sed -i 's/SUDO/'$ID'/g' Config.lua
 
-RED "ايدي البوت" 
+	RED "ايدي البوت" 
 
-read -rp ' ' BOT
+	read -rp ' ' BOT
 
-sed -i 's/BOT/'$BOT'/g' Config.lua
+	sed -i 's/BOT/'$BOT'/g' Config.lua
 
-RED "معرف المطوو" 
+	RED "معرف المطوو" 
 
-read -rp ' ' USERNAME
+	read -rp ' ' USERNAME
 
-sed -i 's/USERNAME/'$USERNAME'/g' Config.lua
+	sed -i 's/USERNAME/'$USERNAME'/g' Config.lua
 
-}
+	fi
 
 STORM() {
 
