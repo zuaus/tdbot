@@ -105,7 +105,7 @@ default_profile = "cli";
 
 cli = {
 
-lua_script = "$HOME/tdbot/bot/Bot.lua";
+lua_script = "$HOME/tdbot/bot/bot.lua";
 
 };
 
