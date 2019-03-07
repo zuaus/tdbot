@@ -42,19 +42,19 @@ taha
 
 EOF
 
-    RED "ايدي المطور" 
+    printf "ايدي المطور" 
 
 	read -rp ' ' ID
 
 	sed -i 's/SUDO/'$ID'/g' Config.lua
 
-	RED "ايدي البوت" 
+	printf "ايدي البوت" 
 
 	read -rp ' ' BOT
 
 	sed -i 's/BOT/'$BOT'/g' Config.lua
 
-	RED "معرف المطوو" 
+	printf "معرف المطوو" 
 
 	read -rp ' ' USERNAME
 
