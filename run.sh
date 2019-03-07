@@ -106,9 +106,49 @@ lua_script = "$HOME/tdbot/bot.lua";
 
 };
 
+cat <<EOF > $HOME/tdbot/Config.lua
+
+do
+
+local _ = {
+
+sudo = 'SUDO',
+
+bot = 'BOT',		
+
+my = 'USERNAME'
+
+}
+
+return _
+
+end
+
+--[[
+
+taha
+
+]]--
+
 EOF
 
-printf "\nConfig Has Been Saved.\n"
+RED "ايدي المطور" 
+
+read -rp ' ' ID
+
+sed -i 's/SUDO/'$ID'/g' Config.lua
+
+RED "ايدي البوت" 
+
+read -rp ' ' BOT
+
+sed -i 's/BOT/'$BOT'/g' Config.lua
+
+RED "معرف المطوو" 
+
+read -rp ' ' USERNAME
+
+sed -i 's/USERNAME/'$USERNAME'/g' Config.lua
 
 }
 
