@@ -76,12 +76,21 @@ echo 'Your Cli Bot Loged In Successfully.'
 
 ./tg -p cli --login --phone=${1}
 
-sleep 3
+sleep 1
+
+STORM() {
 
 ./tg | grep -v "{"
 
+}
 case $1 in
+run)
 
+printf "New is Launching...\n"
+
+STORM
+
+exit;;
 esac
 
 exit 0
