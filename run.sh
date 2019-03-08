@@ -70,12 +70,7 @@ echo "Please Insert Your Phone Number..."
 
 read phone_number
 
-STORMCLI ${phone_number}
-
-echo 'Your Cli Bot Loged In Successfully.'
-
-./tg -p cli --login --phone=${1}
-
+./tg -p cli --login --phone=${phone_number}
 sleep 1
 
 STORM() {
