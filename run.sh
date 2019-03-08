@@ -110,11 +110,11 @@ install
 
 sleep 1
 
-config
+./run.sh config
 
 sleep 1
 
-logcli
+./run.sh logcli
 
 exit;;
 
