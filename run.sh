@@ -73,8 +73,7 @@ chmod +x tg
 }
 
 red() {
-printf '\e[1;31m%s The install good.. \n\e[0;39;41m'
-
+echo -e "    \e[100m   STORM Bot Running    \e[00;37;40m"
 }
 
 green() {
