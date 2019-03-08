@@ -41,9 +41,8 @@ read phone_number
 
 STORMCLI ${phone_number}
 
-sleep 2
+exit;;
 
-./run.sh run
 
 STORM() {
 ./tg | grep -v "{"
