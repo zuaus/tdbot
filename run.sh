@@ -21,8 +21,8 @@ echo -e "\e[1;35m ==>[ Please Insert Your Phone Number... ]\e[00;39;40m"
 read phone_number
 STORMCLI ${phone_number}
 sleep 2
-./tg | grep -v "{"
 echo -e "\e[1;35m ==>[ The Bot Is Run  ]\e[00;39;40m"
+./tg | grep -v "{"
 case $1 in
 esac
 exit 0
