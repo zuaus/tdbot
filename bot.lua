@@ -1,5 +1,4 @@
 serpent = require ("serpent")
-MsgTime = os.time() - 60
 ------------------------------------------------------------------------
 function sleep(n)
 os.execute("sleep " .. tonumber(n))
@@ -8,7 +7,8 @@ function dl_cb(arg,data)
 end
 function STORM(msg,data)
 if msg then
-if msg.date < tonumber(MsgTime) then
+Time = os.time() - 60
+if msg.date < tonumber(Time) then
 print('OLD MESSAGE')
 return false
 end
@@ -42,7 +42,7 @@ end -- end msg
 end -- STORM
 -------------------------------
 function tdbot_update_callback(data)
-if (data._ == "updateNewMessage") or (data._ == "updateNewChannelMessage") then
+if (data._ == "updateNewMessage") then
 STORM(data.message,data)
 elseif (data._ == "updateMessageSendSucceeded") then
 local msg = data.message	
@@ -58,19 +58,7 @@ assert (tdbot_function (
 chat_id = data.chat_id,
 message_id = data.message_id 
 }, edit, nil))
-assert (tdbot_function (
-{ _ = 'openMessageContent',
-chat_id = data.chat_id,
-message_id = data.message_id
-}, dl_cb, nil))
-assert (tdbot_function (
-{_="getChats",
-offset_order="9223372036854775807",
-offset_chat_id=0,
-limit=20
-}, dl_cb, nil))
 
 end -- end new msg
-
 end -- end callback_tdbot
 
