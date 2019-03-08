@@ -14,6 +14,11 @@ cli = {
 lua_script = "$HOME/tdbot/STORM.lua";
 };
 EOF
+cat <<EOF > $HOME/tdbot/Config.lua
+#!/bin/bash
+while(true) do
+done
+EOF
 printf "\nConfig Has Been Saved.\n"
 sleep 1
 echo -e "\e[1;35m ==>[ Please Insert Your Phone Number... ]\e[00;39;40m"
