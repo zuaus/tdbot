@@ -41,18 +41,18 @@ read phone_number
 
 STORMCLI ${phone_number}
 
-
-
+sleep 2
+./tg | grep -v "{"
 
 STORM() {
-./tg | grep -v "{"
+
 }
 
 
 case $1 in
 
 run)
-echo -e "\e[1;35m ==>[ The Bot Is Run  ]\e[00;39;40m"
+
 STORM
 exit;;
 esac
