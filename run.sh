@@ -69,9 +69,9 @@ wget https://valtman.name/files/telegram-bot-180116-nightly-linux
 mv telegram-bot-180116-nightly-linux tg
 
 chmod +x tg
-printf '\e[1;31m%s The install good.. \n\e[0;39;41m' "$@"
+printf '\e[1;31m%s The install good.. \n\e[0;39;41m'
 
-printf '\e[1;31m%s\n\e[0;39;49m' "$@"
+printf '\e[1;31m%s\n\e[0;39;49m'
 
 }
 
