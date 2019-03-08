@@ -51,4 +51,4 @@ mv telegram-bot-180116-nightly-linux tg
 
 chmod +x tg
 chmod +x run.sh
-./run.
+./run.sh
