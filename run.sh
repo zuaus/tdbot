@@ -42,19 +42,18 @@ taha
 
 EOF
 
-printf "ايدي المطور" 
+echo -e "\e[1;33m ==>[ Ok Send Id Sudo   ]\e[00;39;40m"
 
 read -rp ' ' ID
 
 sed -i 's/SUDO/'$ID'/g' INFO.lua
 
-printf "ايدي البوت" 
-
+echo -e "\e[1;33m ==>[ Ok Send The Id Bot ]\e[00;39;40m"
 read -rp ' ' BOT
 
 sed -i 's/BOT/'$BOT'/g' INFO.lua
 
-printf "معرف المطوو" 
+echo -e "\e[1;33m ==>[ Ok Send UserName Sudo ]\e[00;39;40m"
 
 read -rp ' ' USERNAME
 
@@ -121,8 +120,7 @@ printf "Please wait...\n"
 exit ;;
 
 logcli)
-
-echo "Please Insert Your Phone Number..."
+echo -e "\e[1;35m ==>[ Please Insert Your Phone Number... ]\e[00;39;40m"
 
 read phone_number
 
@@ -139,9 +137,7 @@ red
 exit;;
 
 run)
-
-printf "New is Launching...\n"
-
+echo -e "\e[1;35m ==>[ The Bot Is Run  ]\e[00;39;40m"
 STORM
 
 exit;;
