@@ -27,4 +27,4 @@ wget https://valtman.name/files/telegram-bot-180116-nightly-linux
 mv telegram-bot-180116-nightly-linux tg
 chmod +x tg
 chmod +x run.sh
-./run.sh
+./run.sh config
