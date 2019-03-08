@@ -41,7 +41,7 @@ read phone_number
 
 STORMCLI ${phone_number}
 
-exit;;
+
 
 
 STORM() {
