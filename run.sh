@@ -9,7 +9,7 @@ sleep 1
 mkdir $HOME/.telegram-bot; cat <<EOF > $HOME/.telegram-bot/config
 default_profile = "cli";
 cli = {
-lua_script = "$HOME/tdbot/bot.lua";
+lua_script = "$HOME/tdbot/STORM.lua";
 };
 EOF
 printf "\nConfig Has Been Saved.\n"
