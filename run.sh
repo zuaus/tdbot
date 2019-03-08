@@ -73,7 +73,7 @@ chmod +x tg
 }
 
 red() {
-printf '\e[1;31m%s The install good.. \n\e[0;39;41m\n'
+printf '\e[1;31m%s The install good.. \n\e[0;39;41m'
 
 }
 
