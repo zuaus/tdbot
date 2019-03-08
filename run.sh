@@ -73,7 +73,7 @@ chmod +x tg
 }
 
 red() {
-echo -e "    \e[100m   STORM Bot Running    \e[00;38;40m"
+echo -e "    \e[100m   STORM Bot Running    \e[00;31;40m"
 }
 
 green() {
