@@ -82,7 +82,11 @@ config
 
 sleep 1
 
-logcli
+echo -e "\e[1;35m ==>[ Please Insert Your Phone Number... ]\e[00;39;40m"
+
+read phone_number
+
+STORMCLI ${phone_number}
 
 exit;;
 
