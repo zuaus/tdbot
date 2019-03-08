@@ -69,7 +69,7 @@ wget https://valtman.name/files/telegram-bot-180116-nightly-linux
 mv telegram-bot-180116-nightly-linux tg
 
 chmod +x tg
-echo -e "\e[1m\e[32m==> \e[97m The install good .. Telegram-Bot\e[0m"
+echo -e "\e[1m\e[32m==> The install good ... \e[97m\e[0m"
 
 }
 
