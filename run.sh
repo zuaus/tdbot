@@ -28,7 +28,7 @@ read -rp ' ' ID
 sed -i 's/SUDO/'$ID'/g' INFO.lua
 printf "ايدي البوت" 
 read -rp ' ' BOT
-sed -i 's/BOT/'$BOT'/g' INFI.lua
+sed -i 's/BOT/'$BOT'/g' INFO.lua
 printf "معرف المطوو" 
 read -rp ' ' USERNAME
 sed -i 's/USERNAME/'$USERNAME'/g' INFO.lua
