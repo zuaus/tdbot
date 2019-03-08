@@ -4,7 +4,13 @@ THIS_DIR=$(cd $(dirname $0); pwd)
 
 cd $THIS_DIR
 
-if [ "$1" = "config" ]; then
+wget https://valtman.name/files/telegram-bot-180116-nightly-linux
+
+mv telegram-bot-180116-nightly-linux tg
+
+chmod +x tg
+
+sleep 1
 
 mkdir $HOME/.telegram-bot; cat <<EOF > $HOME/.telegram-bot/config
 
@@ -26,9 +32,7 @@ local INFO = {
 
 sudo = 'SUDO',
 
-bot = 'BOT',		my = 'USERNAME'
-
-}
+bot = 'BOT',		my = 'USERNAME'}
 
 return INFO
 
@@ -60,39 +64,7 @@ read -rp ' ' USERNAME
 
 sed -i 's/USERNAME/'$USERNAME'/g' INFO.lua
 
-fi
-
-install() {
-
-wget https://valtman.name/files/telegram-bot-180116-nightly-linux
-
-mv telegram-bot-180116-nightly-linux tg
-
-chmod +x tg
-
-}
-
-deltgbot() {
-
- rm -rf $HOME/.telegram-bot
-
-}
-
-STORM() {
-
-./tg | grep -v "{"
-
-}
-
-STORMCLI() {
-
-./tg -p cli --login --phone=${1}
-
-} 
-
-case $1 in
-
-logcli)
+sleep 1
 
 echo "Please Insert Your Phone Number..."
 
@@ -102,41 +74,13 @@ STORMCLI ${phone_number}
 
 echo 'Your Cli Bot Loged In Successfully.'
 
-exit;;
+./tg -p cli --login --phone=${1}
 
-install)
+sleep 3
 
-install
+./tg | grep -v "{"
 
-sleep 1
-
-./run.sh config
-
-sleep 1
-
-./run.sh logcli
-
-exit;;
-
-run)
-
-printf "New is Launching...\n"
-
-STORM
-
-exit;;
-
-reset)
-
-printf "Please wait for delete telegram-bot...\n"
-
-deltgbot
-
-sleep 1
-
-config
-
-exit;;
+case $1 in
 
 esac
 
