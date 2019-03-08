@@ -75,7 +75,7 @@ echo -e "\e[1m\e[35m==> The install good ... \e[33m\e[0m"
 
 red() {
 
-printf '\e[1;31m%s The install good.. \n\e[0;39;49m' "$@"
+printf '\e[1;31m%s The install good.. \n\e[0;39;41m' "$@"
 
 }
 
